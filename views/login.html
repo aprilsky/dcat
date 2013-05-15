@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Cobub Razor - 开源移动应用分析平台</title>
+	<style>* { margin:0;padding:0; }</style>
+	<link rel="icon" href="http://demo.cobub.com/razor/favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="http://demo.cobub.com/razor/favicon.ico" type="image/x-icon"/>
+	<link rel="Bookmark" href="http://demo.cobub.com/razor/favicon.ico"/>
+	<link rel="stylesheet"
+	href="http://demo.cobub.com/razor/assets/css/jquery.select.css"
+	type="text/css" media="screen" />
+	<script src="http://demo.cobub.com/razor/assets/js/jquery.select.js"
+	type="text/javascript"></script>
+
+	<!--	<link rel="stylesheet" href="http://demo.cobub.com/razor/assets/css/english_layout.css" type="text/css" media="screen" />
+	-->
+	<link rel="stylesheet"
+	href="http://demo.cobub.com/razor/assets/css/layout.css"
+	type="text/css" media="screen" />
+	<link rel="stylesheet"
+	href="http://demo.cobub.com/razor//assets/css/helplayout.css"
+	type="text/css" media="screen" />
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://demo.cobub.com/razor/assets/css/ie.css" type="text/css" media="screen" />
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet"
+	href="http://demo.cobub.com/razor/assets/css/jquery-ui.css" type="text/css"
+	media="screen" />
+	<link rel="stylesheet"
+	href="http://demo.cobub.com/razor/assets/css/layoutpagination.css"
+	type="text/css" media="screen" />
+
+</head>
+
+<body id="body">
+	<header id="header">
+		<hgroup>
+			<h1 class="site_title">
+				<a href="http://demo.cobub.com/razor/">
+					<img class="logo"
+					src="http://demo.cobub.com/razor/assets/images/razorlogo.png" style="border:0"/>
+					<span
+					style="">Cobub Razor</span>
+				</a>
+			</h1>
+		</hgroup>
+	</header>
+	<!-- end of header bar -->
+
+	<form action="/login" method="post" accept-charset="utf-8">
+		<section id="main" class="column" style="width: 100%">
+
+			<article class="module width_full">
+				<header>
+					<h3>用户登录</h3>
+				</header>
+				<div class="module_content">
+					<table class="tablesorter" cellspacing="0">
+						<tbody>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>
+									<label for="login">邮件或用户名</label>
+									:
+								</td>
+								<td>
+									<input type="text" name="login" value="admin" id="login" maxlength="80" size="30" readonly="true"  />
+								</td>
+								<td>
+									<span style='color:red'></span>
+								</td>
+							</tr>
+
+							<tr>
+								<td></td>
+								<td></td>
+								<td>
+									<label for="password">密码</label>
+									:
+								</td>
+								<td>
+									<input type="password" name="password" value="admin" id="password" size="30" readonly="true"  />
+								</td>
+								<td>
+									<span style='color:red'></span>
+								</td>
+							</tr>
+
+							<tr>
+								<td></td>
+								<td></td>
+								<td>
+									<input type="submit" name="submit" value="登录"  />
+								</td>
+					
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+				</div>
+
+			</article>
+
+		</section>
+	</form>
