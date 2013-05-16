@@ -35,3 +35,15 @@ func (this *AppInfo) Insert() (int, error) {
 	id, err := result.LastInsertId()
 	return int(id), err
 }
+
+func (this *AppInfo) GetList() (AppList, error) {
+	err := this.ConnDb()
+	if err != nil {
+		return err
+	}
+	defer this.Close()
+	strSql := "select * from applist"
+	row := this.QueryRow(strSql, nil)
+
+	return
+}

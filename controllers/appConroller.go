@@ -27,14 +27,6 @@ func getAppUserinfo() {
 
 }
 
-func IndexHandler(rw http.ResponseWriter, req *http.Request) {
-	t, err := template.ParseFiles("views/index.tpl")
-	if err != nil {
-		log.Println(err)
-	}
-	t.Execute(rw, account)
-}
-
 func NewappHandler(rw http.ResponseWriter, req *http.Request) {
 
 	if req.Method == "GET" {

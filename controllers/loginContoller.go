@@ -34,3 +34,11 @@ func LoginHandler(rw http.ResponseWriter, req *http.Request) {
 	}
 
 }
+
+func IndexHandler(rw http.ResponseWriter, req *http.Request) {
+	t, err := template.ParseFiles("views/index.tpl")
+	if err != nil {
+		log.Println(err)
+	}
+	t.Execute(rw, account)
+}
