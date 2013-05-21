@@ -1,6 +1,8 @@
 package api
 
 import (
+	"dcat/controllers"
+	"dcat/models"
 	"dcat/service"
 	"encoding/json"
 	"log"
@@ -22,4 +24,20 @@ func LoginHandlerAPI(rw http.ResponseWriter, req *http.Request) {
 			rw.Write(b)
 		}
 	}
+}
+
+func GetAppListAPI(rw http.ResponseWriter, req *http.Request) {
+	sess := controllers.GlobalSessions.SessionStart(rw, req)
+	var account *models.AccountInfo
+	if req.Method == "POST" {
+		accountSess := sess.Get("account")
+		if accountSess != nil {
+			account = accountSess.(*models.AccountInfo)
+			applist := service.GetAppUserinfo(account.Aid)
+			a, _ := json.Marshal(applist)
+			b := []byte(a)
+			rw.Write(b)
+		}
+	}
+
 }
